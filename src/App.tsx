@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import Home from  './pages/home/'
+import  GlobalStyle  from "./styles/globalstyle";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <h1>Minha aplicação</h1>
+    <>
+      <Home/>
+      <GlobalStyle/>
+    </>
+    
   )
 }
 
-export default App
