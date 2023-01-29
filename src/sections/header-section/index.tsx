@@ -6,11 +6,11 @@ export default function Header_section(){
         <Container_header>
             <img id="logo" src="/logo.png" alt="" />
             <nav>
-                <a>Inicio</a>
-                <a>Contato</a>
-                <a>Quem somos?</a>
+                <a>Home</a>
+                <a>Contact</a>
+                <a>Who we are?</a>
             </nav>
-            <Button text="Meus pedidos"/>
+            <Button text="I am a restaurant"/>
         </Container_header>
     )
 }

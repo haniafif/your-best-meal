@@ -7,7 +7,7 @@ export default createGlobalStyle`
     --color-text-in-primary: #FFFF;
     --color-primary: #F21416;
     --color-secondary: #D0F8CD;
-    --color-tertiary:  #B3BAC5;
+    --color-tertiary:  #717187;
     --color-border: rgba(255, 255, 255, 0.2);
     --color-success: #7CC39C;
     --color-warning: #FBEA85;
