@@ -108,4 +108,8 @@ export default createGlobalStyle`
     background: #fff;
   }
 
+  a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
 `;

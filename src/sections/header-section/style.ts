@@ -18,6 +18,8 @@ export const Container_header = styled.div`
         margin-left: -13rem;
         a{
             margin-right: 3rem;
+            text-decoration:none;
+            text-decoration-color:none;
         }
     }
 

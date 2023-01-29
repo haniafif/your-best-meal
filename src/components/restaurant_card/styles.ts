@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 35rem;
-    height: 10rem;
+    height: 13rem;
     display: flex;
     display: flex;
     flex-direction: column;
@@ -14,18 +14,26 @@ export const Container = styled.div`
     margin-top: 3rem;
 
     padding: 1rem;
+    transition: ease-in .3s;
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 
     header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        margin-bottom:1rem;
     }
 
     main{
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom:1rem;
 
         width: 100%;
 
@@ -53,6 +61,30 @@ export const Container = styled.div`
 
     .flexrow{
         align-items: center;
+    }
+
+    #descriptionContainer{
+        animation: fadeIn 1s;
+    }
+
+    #description{
+        font-size:2rem;
+        margin-block: 1.5rem;
+        font-weight: 600;
+    }
+
+    #divButtonCard{
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-top:1rem;
+        margin-right:1.2rem;
+        width: 100%;
+    }
+
+    :hover{
+        transform: scale(1.04);
+        height: 40rem;
     }
 
     

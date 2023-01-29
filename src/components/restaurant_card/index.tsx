@@ -1,6 +1,8 @@
 import { Container } from "./styles";
 import {FiStar,FiDollarSign,FiMapPin} from "react-icons/fi"
 import {IoMdRestaurant} from "react-icons/Io"
+import { useState } from "react";
+import Button from "../button";
 
 
 interface restaurantProps{
@@ -11,10 +13,13 @@ interface restaurantProps{
     cuisine?: String;
 }
 
-
 export default function Restaurant_card({name,rating,distance,price,cuisine}:restaurantProps){
+
+    const [isShown,setIsShown]= useState(false)
+
     return(
-        <Container>
+        <Container onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}>
             <header>
                 <div className="flexrow">
                     <h4>4</h4>
@@ -38,8 +43,17 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
                     <FiDollarSign/>
                     <h4 className="align_space">10</h4>
                 </div>
-                
             </footer>
+
+            {
+                isShown &&
+
+                <div id="descriptionContainer">
+                    <h4 id="description">Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo illo quam repellendus commodi quod maiores fugit culpa cumque sint nihil atque odio quae enim fuga optio officiis, qui reiciendis a?</p>
+                    <div id="divButtonCard"><Button text="See more"/></div>
+                </div>
+            }
         </Container>
     )
 }
