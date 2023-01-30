@@ -3,6 +3,7 @@ import {FiStar,FiDollarSign,FiMapPin} from "react-icons/fi"
 import {IoMdRestaurant} from "react-icons/Io"
 import { useState } from "react";
 import Button from "../button";
+import { cuisines } from "../../utility/cuisines";
 
 
 interface restaurantProps{
@@ -10,12 +11,17 @@ interface restaurantProps{
     rating?: Number;
     distance?: Number;
     price?: Number;
-    cuisine?: String;
+    cuisine?: number;
 }
 
 export default function Restaurant_card({name,rating,distance,price,cuisine}:restaurantProps){
 
     const [isShown,setIsShown]= useState(false)
+
+    function capitalizeFirstLetter(string:string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+      
 
     return(
         <Container onMouseEnter={() => setIsShown(true)}
@@ -25,7 +31,7 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
                     <h4>{`${rating}`}</h4>
                     <FiStar color="gold" fill="gold"/>
                 </div>
-                {cuisine}
+                {cuisine ? capitalizeFirstLetter(cuisines[cuisine]) : ""}
             </header>
             
             <main>
