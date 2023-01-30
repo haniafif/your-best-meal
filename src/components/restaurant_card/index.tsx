@@ -22,26 +22,26 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
         onMouseLeave={() => setIsShown(false)}>
             <header>
                 <div className="flexrow">
-                    <h4>4</h4>
+                    <h4>{`${rating}`}</h4>
                     <FiStar color="gold" fill="gold"/>
                 </div>
-                Chinese
+                {cuisine}
             </header>
             
             <main>
-                <IoMdRestaurant id="foodIco"/>
+                <IoMdRestaurant color="red" id="foodIco"/>
                 <h2>{name}</h2>
             </main>
 
             <footer>
                 <div className="flexrow">
                     <FiMapPin/>
-                    <h4 className="align_space">10 KM</h4>
+                    <h4 className="align_space">{`${distance}`} KM</h4>
                 </div>
 
                 <div className="flexrow">
                     <FiDollarSign/>
-                    <h4 className="align_space">10</h4>
+                    <h4 className="align_space">{`${price}`}</h4>
                 </div>
             </footer>
 

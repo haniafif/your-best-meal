@@ -38,8 +38,7 @@ export const Container = styled.div`
         width: 100%;
 
         #foodIco{
-            margin-left: 5rem;
-            margin-right: -2rem;
+            margin-left: 4rem;
             font-size: 2.5rem;
         }
     }
