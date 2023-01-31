@@ -1,6 +1,5 @@
 import { Container } from "./styles";
 import {FiStar,FiDollarSign,FiMapPin} from "react-icons/fi"
-import {IoMdRestaurant} from "react-icons/Io"
 import { useState } from "react";
 import Button from "../button";
 import { cuisines } from "../../utility/cuisines";
@@ -30,7 +29,6 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
             </header>
             
             <main>
-                <IoMdRestaurant color="red" id="foodIco"/>
                 <h2>{name}</h2>
             </main>
 
