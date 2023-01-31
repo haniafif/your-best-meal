@@ -18,11 +18,6 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
 
     const [isShown,setIsShown]= useState(false)
 
-    function capitalizeFirstLetter(string:string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-      
-
     return(
         <Container onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}>
@@ -31,7 +26,7 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
                     <h4>{`${rating}`}</h4>
                     <FiStar color="gold" fill="gold"/>
                 </div>
-                {cuisine ? capitalizeFirstLetter(cuisines[cuisine]) : ""}
+                {cuisine ? cuisines[cuisine] : ""}
             </header>
             
             <main>
@@ -42,7 +37,7 @@ export default function Restaurant_card({name,rating,distance,price,cuisine}:res
             <footer>
                 <div className="flexrow">
                     <FiMapPin/>
-                    <h4 className="align_space">{`${distance}`} KM</h4>
+                    <h4 className="align_space">{`${distance}`} Miles</h4>
                 </div>
 
                 <div className="flexrow">
