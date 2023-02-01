@@ -1,5 +1,5 @@
 import { Container } from "./style";
-import {useState , useEffect} from "react"
+import {useState , useEffect, ChangeEvent} from "react"
 import Restaurant_card from "../../components/restaurant_card";
 import { Fade, Slide  } from "react-awesome-reveal";
 import { instanceAPI } from "../../utility/axios";
@@ -35,12 +35,12 @@ export default function Main_section(this: any){
                 "customer_rating_wanted": inputRatingData,
                 "cuisine_id_wanted": inputCuisineData
             }).then(
-                (response) => setFilteredData(response.data.slice(0, 5))
+                (response) => setFilteredData(response.data)
             )
         
     },[inputTextData,inputDistanceData,inputPriceData,inputRatingData,inputCuisineData])
 
-    const handleChange = (e:any) => {
+    const handleChange = (e:ChangeEvent<HTMLSelectElement>) => {
         setInputCuisineData(Number(e.target.value));
       };
     
@@ -49,7 +49,7 @@ export default function Main_section(this: any){
             <h1>
                 <Fade cascade damping={.055}>Everything to make your day easy</Fade>
             </h1>
-            <h3>What you need is here. Search and eat anywhere.</h3>
+            <h2>What you need is here. Search and eat anywhere.</h2>
 
             <section>
                 <input placeholder="Name of the restaurant" id="input_home" type="text" onChange={(event) => setInputTextData(event.target.value)}/>

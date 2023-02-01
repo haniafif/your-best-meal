@@ -12,7 +12,7 @@ export const Container = styled.main`
         font-weight: 600;
     }
 
-    h3{
+    h2{
         font-size: 1.5rem;
         margin-top: 1.5rem;
         color: var(--color-tertiary);

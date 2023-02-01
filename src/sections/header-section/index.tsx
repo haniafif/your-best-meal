@@ -4,7 +4,7 @@ import { Container_header } from "./style";
 export default function Header_section(){
     return(
         <Container_header>
-            <img id="logo" src="/logo.png" alt="" />
+            <img loading="lazy" id="logo" src="/logo.png" alt="" />
             <nav>
                 <a href="#">Home</a>
                 <a href="https://github.com/haniafif/your-best-meal" target={"_blank"}>Contact</a>

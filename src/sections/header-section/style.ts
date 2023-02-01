@@ -24,7 +24,7 @@ export const Container_header = styled.div`
     }
 
     #logo{
-        height: 90px;
+        height: 100px;
         width: 100px;
     }
 `
