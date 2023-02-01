@@ -1,43 +1,34 @@
-# take-home-assessment
-A take home assessment designed for Full-stack or Backend developers
+# Project Your-Meal
+Fullstack challenge
 
-## Best matched restaurants
 ### Introduction
-This assessment is designed to test your thinking process and coding skills when facing a real industry problem. We're looking for code that is clean, readable, testable, robust, performant, and maintainable.
+The test was performed on React + Vite + Yarn with typescript
 
-Since this assessment includes a searching function, we kindly ask you to avoid out of box search engines such as ElasticSearch. Instead, you should write the searching logic by yourself. We are focusing on your idea and your code quality, hence will not make judgments on what technologies you choose. All the data you will need in this assessment will be provided to you as **.csv** files.
+### Deploy
 
-We will only assess you based on the requirements listed below, but feel free to add extra features beyond these requirements. If you continue to our interview panel stage, we will ask you questions about your implementation.
+https://your-best-meal.vercel.app/ ( Must run back-end on local machine to work properly )
 
-When you are done, please return the task by email, or via Github. We expect to receive your response within 6 days after you received this assessment.
+### How to run the project?
 
-> *Note: We expect you to do this assessment by yourself without other people's help. We ask you to keep this assessment private and not to share it with others. All data provided are fake and used only for this assessment.*
+To run the front-end application first start with command - Yarn to install all packages
 
-## Find the best-matched restaurants
-### Backend Application
+After this run yarn dev to start development mode, default port for vite is 5173
 
-You have data about local restaurants located near your company, which you can find in the **restaurants.csv** file. You would like to develop a basic search function that allows your colleagues to search those restaurants to help them find where they would like to have lunch. The search is based on five criteria: **Restaurant Name, Customer Rating(1 star ~ 5 stars), Distance(1 mile ~ 10 miles), Price(how much one person will spend on average, $10 ~ $50), Cuisine(Chinese, American, Thai, etc.).** The requirements are listed below.
+## Code structure
 
-1. The function should allow users to provide up to five parameters based on the criteria listed above. *You can assume each parameter can contain only one value.*
-2. If parameter values are invalid, return an error message.
-3. The function should return up to five matches based on the provided criteria. If no matches are found, return an empty list. If less than 5 matches are found, return them all. If more than 5 matches are found, return the best 5 matches. The returned results should be sorted according to the rules explained below. Every record in the search results should at least contain the restaurant name.
-4. "Best match" is defined as below:
-   - A Restaurant Name match is defined as an exact or partial String match with what users provided. For example, "Mcd" would match "Mcdonald's".
-   - A Customer Rating match is defined as a Customer Rating equal to or more than what users have asked for. For example, "3" would match all the 3 stars restaurants plus all the 4 stars and 5 stars restaurants.
-   - A Distance match is defined as a Distance equal to or less than what users have asked for. For example, "2" would match any distance that is equal to or less than 2 miles from your company.
-   - A Price match is defined as a Price equal to or less than what users have asked for. For example, "15" would match any price that is equal to or less than $15 per person.
-   - A Cuisine match is defined as an exact or partial String match with what users provided. For example, "Chi" would match "Chinese". You can find all the possible Cuisines in the **cuisines.csv** file. *You can assume each restaurant offers only one cuisine.*
-   - The five parameters are holding an "AND" relationship. For example, if users provide Name = "Mcdonald's" and Distance = 2, you should find all "Mcdonald's" within 2 miles.
-   - When multiple matches are found, you should sort them as described below.
-     - Sort the restaurants by Distance first.
-     - After the above process, if two matches are still equal, then the restaurant with a higher customer rating wins.
-     - After the above process, if two matches are still equal, then the restaurant with a lower price wins.
-     - After the above process, if two matches are still equal, then you can randomly decide the order.
-     - Example: if the input is Customer Rating = 3 and Price = 15. Mcdonald's is 4 stars with an average spend = $10, and it is 1 mile away. And KFC is 3 stars with an average spend = $8, and it is 1 mile away. Then we should consider Mcdonald's as a better match than KFC. (They both matches the search criteria -> we compare distance -> we get a tie -> we then compare customer rating -> Mcdonald's wins)
+/src/components were all dinamic components are located, each folder constains the respective styled-component
+/src/pages were all pages were located
+/src/section were all "block" coponents are located, bigger components as footers, headers etc..
+/src/styles location of globalstyle.ts all change will apply on whole project
+/src/utility axios configuration ( API ENV ), types (DTO) which are the returns from the API
 
-## Frontend Application
-You can develop your frontend application by using any of the most popular framework, like Vue.js, React.js, Angular, or another one similar. The frontend application should communicate with backend application described above. We will mainly assess you based on your code quality, the page design is not important to us in this assessment. Your application must have at least two components: a search component, presenting the parameters fields (Restaurant Name, Customer Rating, Distance, Average Price, Cuisine); and a component to show the search results. You can also develop other additional components if you want.
+## Tecnologies/Frameworks/Packages used
 
----
+- React (Framework) https://reactjs.org/docs/getting-started.html
+- Typescript (Language - superset of javascript) https://www.typescriptlang.org/
+- Axios (API Management) https://axios-http.com/docs/intro
+- react-awesome-reveal (animations) https://react-awesome-reveal.morello.dev/
 
-### The final submitted work should include a README file. **The steps to run and test your program should be clearly introduced in the README file.** If you have made any additional **Assumptions** besides what we have listed above while working on this assessment, please document them so that we can better understand your solution.
+## API
+
+The api used for the back-end for this project is https://github.com/haniafif/byFOODApi , created in JAVA and SPRINGBOOT, see respective README for more info
