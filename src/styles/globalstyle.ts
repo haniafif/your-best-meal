@@ -38,6 +38,7 @@ export default createGlobalStyle`
     height: 100%;
   }
 
+
   body {
     background-image: white;
     color: var(--color-text);

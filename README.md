@@ -14,6 +14,8 @@ To run the front-end application first start with command - Yarn to install all 
 
 After this run yarn dev to start development mode, default port for vite is 5173
 
+Listening for back-end on port 8080 enter /src/axios for more info
+
 ## Code structure
 
 /src/components were all dinamic components are located, each folder constains the respective styled-component

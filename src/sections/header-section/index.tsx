@@ -7,7 +7,7 @@ export default function Header_section(){
             <img loading="lazy" id="logo" src="/logo.png" alt="" />
             <nav>
                 <a href="#">Home</a>
-                <a href="https://github.com/haniafif/your-best-meal" target={"_blank"}>Contact</a>
+                <a href="https://github.com/haniafif/your-best-meal" target={"_blank"}>Github</a>
             </nav>
             <Button text="I am a restaurant"/>
         </Container_header>
